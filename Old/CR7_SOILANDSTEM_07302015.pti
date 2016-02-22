@@ -1,0 +1,425 @@
+Program Trace Information File for:  CR7_SOILANDSTEM_07302015.csi
+Date: 7/30/2015
+Time: 16:57:16
+
+T = Program Table Number
+N = Sequential Program Instruction Location Number
+Instruction = Instruction Number and Name
+
+Inst ExTm = Individual Instruction Execution Time
+Block ExTm = Cumulative Execution Time for program block,
+             i.e., subroutine
+Prog ExTm = Cumulative Total Program Execution Time
+
+                                                          Output Flag High
+                                   Inst  Block   Prog     Inst  Block   Prog
+                                   ExTm   ExTm   ExTm     ExTm   ExTm   ExTm
+T|N|Instruction                   (msec) (msec) (msec)   (msec) (msec) (msec)
+---------------                   ------ ------ ------   ------ ------ ------
+1|1|92 If time is                   0.3    0.3    0.3      0.3    0.3    0.3
+ Output Flag Set @ 11 for Array 101
+1|2|91 If Flag/Port                 0.2    0.5    0.5      0.2    0.5    0.5
+1|3|17 Panel Temperature          116.2  116.7  116.7    116.2  116.7  116.7
+1|4|2 Volt (Diff)                 357.8  474.5  474.5    357.8  474.5  474.5
+1|5|30 Z=F                          0.3  474.8  474.8      0.3  474.8  474.8
+1|6|77 Real Time                    0.1  474.9  474.9      1.0  475.8  475.8
+ Output Data 3 Values
+1|7|70 Sample                       0.1  475.0  475.0      1.0  476.8  476.8
+ Output Data 1 Values
+1|8|70 Sample                       0.1  475.1  475.1      1.0  477.8  477.8
+ Output Data 1 Values
+1|9|70 Sample                       0.1  475.2  475.2      4.6  482.4  482.4
+ Output Data 7 Values
+1|10|86 Do                          0.1  475.3  475.3      0.1  482.5  482.5
+1|11|92 If time is                  0.3  475.6  475.6      0.3  482.8  482.8
+1|12|30 Z=F                         0.3  475.9  475.9      0.3  483.1  483.1
+1|13|30 Z=F                         0.3  476.2  476.2      0.3  483.4  483.4
+1|14|25 Thermocouple Psychrometer35305.0 35781.2 35781.2   35305.0 35788.4 35788.4
+1|15|86 Do                          0.1 35781.3 35781.3      0.1 35788.5 35788.5
+  ----Subroutine 1---------------
+  3|1|85 Beginning of Subroutine    0.0    0.0 35781.3      0.0    0.0 35788.5
+  3|2|86 Do                         0.1    0.1 35781.4      0.1    0.1 35788.6
+ Output Flag Set @ 32 for Array 302
+  3|3|77 Real Time                  0.1    0.2 35781.5      1.0    1.1 35789.6
+ Output Data 3 Values
+  3|4|70 Sample                     0.1    0.3 35781.6      1.0    2.1 35790.6
+ Output Data 1 Values
+  3|5|70 Sample                     0.1    0.4 35781.7      1.0    3.1 35791.6
+ Output Data 1 Values
+  3|6|70 Sample                     0.1    0.5 35781.8      1.0    4.1 35792.6
+ Output Data 1 Values
+  3|7|70 Sample                     0.1    0.6 35781.9     13.6   17.7 35806.2
+ Output Data 22 Values
+  3|8|32 Z=Z+1                      0.6    1.2 35782.5      0.6   18.3 35806.8
+  3|9|86 Do                         0.1    1.3 35782.6      0.1   18.4 35806.9
+ Output Flag Set @ 39 for Array 309
+  3|10|77 Real Time                 0.1    1.4 35782.7      1.0   19.4 35807.9
+ Output Data 3 Values
+  3|11|70 Sample                    0.1    1.5 35782.8      1.0   20.4 35808.9
+ Output Data 1 Values
+  3|12|70 Sample                    0.1    1.6 35782.9      1.0   21.4 35809.9
+ Output Data 1 Values
+  3|13|70 Sample                    0.1    1.7 35783.0      1.0   22.4 35810.9
+ Output Data 1 Values
+  3|14|70 Sample                    0.1    1.8 35783.1     13.6   36.0 35824.5
+ Output Data 22 Values
+  3|15|32 Z=Z+1                     0.6    2.4 35783.7      0.6   36.6 35825.1
+  3|16|86 Do                        0.1    2.5 35783.8      0.1   36.7 35825.2
+ Output Flag Set @ 316 for Array 316
+  3|17|77 Real Time                 0.1    2.6 35783.9      1.0   37.7 35826.2
+ Output Data 3 Values
+  3|18|70 Sample                    0.1    2.7 35784.0      1.0   38.7 35827.2
+ Output Data 1 Values
+  3|19|70 Sample                    0.1    2.8 35784.1      1.0   39.7 35828.2
+ Output Data 1 Values
+  3|20|70 Sample                    0.1    2.9 35784.2      1.0   40.7 35829.2
+ Output Data 1 Values
+  3|21|70 Sample                    0.1    3.0 35784.3     13.6   54.3 35842.8
+ Output Data 22 Values
+  3|22|32 Z=Z+1                     0.6    3.6 35784.9      0.6   54.9 35843.4
+  3|23|86 Do                        0.1    3.7 35785.0      0.1   55.0 35843.5
+ Output Flag Set @ 323 for Array 323
+  3|24|77 Real Time                 0.1    3.8 35785.1      1.0   56.0 35844.5
+ Output Data 3 Values
+  3|25|70 Sample                    0.1    3.9 35785.2      1.0   57.0 35845.5
+ Output Data 1 Values
+  3|26|70 Sample                    0.1    4.0 35785.3      1.0   58.0 35846.5
+ Output Data 1 Values
+  3|27|70 Sample                    0.1    4.1 35785.4      1.0   59.0 35847.5
+ Output Data 1 Values
+  3|28|70 Sample                    0.1    4.2 35785.5     13.6   72.6 35861.1
+ Output Data 22 Values
+  3|29|32 Z=Z+1                     0.6    4.8 35786.1      0.6   73.2 35861.7
+  3|30|86 Do                        0.1    4.9 35786.2      0.1   73.3 35861.8
+ Output Flag Set @ 330 for Array 330
+  3|31|77 Real Time                 0.1    5.0 35786.3      1.0   74.3 35862.8
+ Output Data 3 Values
+  3|32|70 Sample                    0.1    5.1 35786.4      1.0   75.3 35863.8
+ Output Data 1 Values
+  3|33|70 Sample                    0.1    5.2 35786.5      1.0   76.3 35864.8
+ Output Data 1 Values
+  3|34|70 Sample                    0.1    5.3 35786.6      1.0   77.3 35865.8
+ Output Data 1 Values
+  3|35|70 Sample                    0.1    5.4 35786.7     13.6   90.9 35879.4
+ Output Data 22 Values
+  3|36|32 Z=Z+1                     0.6    6.0 35787.3      0.6   91.5 35880.0
+  3|37|86 Do                        0.1    6.1 35787.4      0.1   91.6 35880.1
+  3|38|32 Z=Z+1                     0.6    6.7 35788.0      0.6   92.2 35880.7
+  3|39|95 End                       0.2    6.9 35788.2      0.2   92.4 35880.9
+  -----End Subroutine 1 ---------
+1|16|25 Thermocouple Psychrometer35305.0 71086.3 71093.2   35305.0 71093.5 71185.9
+1|17|86 Do                          0.1 71086.4 71093.3      0.1 71093.6 71186.0
+  ----Subroutine 1---------------
+  3|1|85 Beginning of Subroutine    0.0    0.0 71093.3      0.0    0.0 71186.0
+  3|2|86 Do                         0.1    0.1 71093.4      0.1    0.1 71186.1
+ Output Flag Set @ 32 for Array 302
+  3|3|77 Real Time                  0.1    0.2 71093.5      1.0    1.1 71187.1
+ Output Data 3 Values
+  3|4|70 Sample                     0.1    0.3 71093.6      1.0    2.1 71188.1
+ Output Data 1 Values
+  3|5|70 Sample                     0.1    0.4 71093.7      1.0    3.1 71189.1
+ Output Data 1 Values
+  3|6|70 Sample                     0.1    0.5 71093.8      1.0    4.1 71190.1
+ Output Data 1 Values
+  3|7|70 Sample                     0.1    0.6 71093.9     13.6   17.7 71203.7
+ Output Data 22 Values
+  3|8|32 Z=Z+1                      0.6    1.2 71094.5      0.6   18.3 71204.3
+  3|9|86 Do                         0.1    1.3 71094.6      0.1   18.4 71204.4
+ Output Flag Set @ 39 for Array 309
+  3|10|77 Real Time                 0.1    1.4 71094.7      1.0   19.4 71205.4
+ Output Data 3 Values
+  3|11|70 Sample                    0.1    1.5 71094.8      1.0   20.4 71206.4
+ Output Data 1 Values
+  3|12|70 Sample                    0.1    1.6 71094.9      1.0   21.4 71207.4
+ Output Data 1 Values
+  3|13|70 Sample                    0.1    1.7 71095.0      1.0   22.4 71208.4
+ Output Data 1 Values
+  3|14|70 Sample                    0.1    1.8 71095.1     13.6   36.0 71222.0
+ Output Data 22 Values
+  3|15|32 Z=Z+1                     0.6    2.4 71095.7      0.6   36.6 71222.6
+  3|16|86 Do                        0.1    2.5 71095.8      0.1   36.7 71222.7
+ Output Flag Set @ 316 for Array 316
+  3|17|77 Real Time                 0.1    2.6 71095.9      1.0   37.7 71223.7
+ Output Data 3 Values
+  3|18|70 Sample                    0.1    2.7 71096.0      1.0   38.7 71224.7
+ Output Data 1 Values
+  3|19|70 Sample                    0.1    2.8 71096.1      1.0   39.7 71225.7
+ Output Data 1 Values
+  3|20|70 Sample                    0.1    2.9 71096.2      1.0   40.7 71226.7
+ Output Data 1 Values
+  3|21|70 Sample                    0.1    3.0 71096.3     13.6   54.3 71240.3
+ Output Data 22 Values
+  3|22|32 Z=Z+1                     0.6    3.6 71096.9      0.6   54.9 71240.9
+  3|23|86 Do                        0.1    3.7 71097.0      0.1   55.0 71241.0
+ Output Flag Set @ 323 for Array 323
+  3|24|77 Real Time                 0.1    3.8 71097.1      1.0   56.0 71242.0
+ Output Data 3 Values
+  3|25|70 Sample                    0.1    3.9 71097.2      1.0   57.0 71243.0
+ Output Data 1 Values
+  3|26|70 Sample                    0.1    4.0 71097.3      1.0   58.0 71244.0
+ Output Data 1 Values
+  3|27|70 Sample                    0.1    4.1 71097.4      1.0   59.0 71245.0
+ Output Data 1 Values
+  3|28|70 Sample                    0.1    4.2 71097.5     13.6   72.6 71258.6
+ Output Data 22 Values
+  3|29|32 Z=Z+1                     0.6    4.8 71098.1      0.6   73.2 71259.2
+  3|30|86 Do                        0.1    4.9 71098.2      0.1   73.3 71259.3
+ Output Flag Set @ 330 for Array 330
+  3|31|77 Real Time                 0.1    5.0 71098.3      1.0   74.3 71260.3
+ Output Data 3 Values
+  3|32|70 Sample                    0.1    5.1 71098.4      1.0   75.3 71261.3
+ Output Data 1 Values
+  3|33|70 Sample                    0.1    5.2 71098.5      1.0   76.3 71262.3
+ Output Data 1 Values
+  3|34|70 Sample                    0.1    5.3 71098.6      1.0   77.3 71263.3
+ Output Data 1 Values
+  3|35|70 Sample                    0.1    5.4 71098.7     13.6   90.9 71276.9
+ Output Data 22 Values
+  3|36|32 Z=Z+1                     0.6    6.0 71099.3      0.6   91.5 71277.5
+  3|37|86 Do                        0.1    6.1 71099.4      0.1   91.6 71277.6
+  3|38|32 Z=Z+1                     0.6    6.7 71100.0      0.6   92.2 71278.2
+  3|39|95 End                       0.2    6.9 71100.2      0.2   92.4 71278.4
+  -----End Subroutine 1 ---------
+1|18|95 End                         0.2 71086.6 71100.4      0.2 71093.8 71278.6
+1|19|95 End                         0.2 71086.8 71100.6      0.2 71094.0 71278.8
+1|20|92 If time is                  0.3 71087.1 71100.9      0.3 71094.3 71279.1
+1|21|91 If Flag/Port                0.2 71087.3 71101.1      0.2 71094.5 71279.3
+1|22|86 Do                          0.1 71087.4 71101.2      0.1 71094.6 71279.4
+1|23|10 Battery Voltage            22.6 71110.0 71123.8     22.6 71117.2 71302.0
+1|24|30 Z=F                         0.3 71110.3 71124.1      0.3 71117.5 71302.3
+1|25|17 Panel Temperature         116.2 71226.5 71240.3    116.2 71233.7 71418.5
+1|26|92 If time is                  0.3 71226.8 71240.6      0.3 71234.0 71418.8
+1|27|30 Z=F                         0.3 71227.1 71240.9      0.3 71234.3 71419.1
+1|28|30 Z=F                         0.3 71227.4 71241.2      0.3 71234.6 71419.4
+1|29|25 Thermocouple Psychrometer38305.0 109532.4 109546.2   38305.0 109539.6 109724.4
+1|30|86 Do                          0.1 109532.5 109546.3      0.1 109539.7 109724.5
+  ----Subroutine 2---------------
+  3|1|85 Beginning of Subroutine    0.0    0.0 109546.3      0.0    0.0 109724.5
+  3|2|86 Do                         0.1    0.1 109546.4      0.1    0.1 109724.6
+ Output Flag Set @ 32 for Array 302
+  3|3|77 Real Time                  0.1    0.2 109546.5      1.0    1.1 109725.6
+ Output Data 3 Values
+  3|4|70 Sample                     0.1    0.3 109546.6      1.0    2.1 109726.6
+ Output Data 1 Values
+  3|5|70 Sample                     0.1    0.4 109546.7      1.0    3.1 109727.6
+ Output Data 1 Values
+  3|6|70 Sample                     0.1    0.5 109546.8      1.0    4.1 109728.6
+ Output Data 1 Values
+  3|7|70 Sample                     0.1    0.6 109546.9     13.6   17.7 109742.2
+ Output Data 22 Values
+  3|8|32 Z=Z+1                      0.6    1.2 109547.5      0.6   18.3 109742.8
+  3|9|86 Do                         0.1    1.3 109547.6      0.1   18.4 109742.9
+ Output Flag Set @ 39 for Array 309
+  3|10|77 Real Time                 0.1    1.4 109547.7      1.0   19.4 109743.9
+ Output Data 3 Values
+  3|11|70 Sample                    0.1    1.5 109547.8      1.0   20.4 109744.9
+ Output Data 1 Values
+  3|12|70 Sample                    0.1    1.6 109547.9      1.0   21.4 109745.9
+ Output Data 1 Values
+  3|13|70 Sample                    0.1    1.7 109548.0      1.0   22.4 109746.9
+ Output Data 1 Values
+  3|14|70 Sample                    0.1    1.8 109548.1     13.6   36.0 109760.5
+ Output Data 22 Values
+  3|15|32 Z=Z+1                     0.6    2.4 109548.7      0.6   36.6 109761.1
+  3|16|86 Do                        0.1    2.5 109548.8      0.1   36.7 109761.2
+ Output Flag Set @ 316 for Array 316
+  3|17|77 Real Time                 0.1    2.6 109548.9      1.0   37.7 109762.2
+ Output Data 3 Values
+  3|18|70 Sample                    0.1    2.7 109549.0      1.0   38.7 109763.2
+ Output Data 1 Values
+  3|19|70 Sample                    0.1    2.8 109549.1      1.0   39.7 109764.2
+ Output Data 1 Values
+  3|20|70 Sample                    0.1    2.9 109549.2      1.0   40.7 109765.2
+ Output Data 1 Values
+  3|21|70 Sample                    0.1    3.0 109549.3     13.6   54.3 109778.8
+ Output Data 22 Values
+  3|22|32 Z=Z+1                     0.6    3.6 109549.9      0.6   54.9 109779.4
+  3|23|86 Do                        0.1    3.7 109550.0      0.1   55.0 109779.5
+ Output Flag Set @ 323 for Array 323
+  3|24|77 Real Time                 0.1    3.8 109550.1      1.0   56.0 109780.5
+ Output Data 3 Values
+  3|25|70 Sample                    0.1    3.9 109550.2      1.0   57.0 109781.5
+ Output Data 1 Values
+  3|26|70 Sample                    0.1    4.0 109550.3      1.0   58.0 109782.5
+ Output Data 1 Values
+  3|27|70 Sample                    0.1    4.1 109550.4      1.0   59.0 109783.5
+ Output Data 1 Values
+  3|28|70 Sample                    0.1    4.2 109550.5     13.6   72.6 109797.1
+ Output Data 22 Values
+  3|29|32 Z=Z+1                     0.6    4.8 109551.1      0.6   73.2 109797.7
+  3|30|86 Do                        0.1    4.9 109551.2      0.1   73.3 109797.8
+ Output Flag Set @ 330 for Array 330
+  3|31|77 Real Time                 0.1    5.0 109551.3      1.0   74.3 109798.8
+ Output Data 3 Values
+  3|32|70 Sample                    0.1    5.1 109551.4      1.0   75.3 109799.8
+ Output Data 1 Values
+  3|33|70 Sample                    0.1    5.2 109551.5      1.0   76.3 109800.8
+ Output Data 1 Values
+  3|34|70 Sample                    0.1    5.3 109551.6      1.0   77.3 109801.8
+ Output Data 1 Values
+  3|35|70 Sample                    0.1    5.4 109551.7     13.6   90.9 109815.4
+ Output Data 22 Values
+  3|36|32 Z=Z+1                     0.6    6.0 109552.3      0.6   91.5 109816.0
+  3|37|86 Do                        0.1    6.1 109552.4      0.1   91.6 109816.1
+  3|38|32 Z=Z+1                     0.6    6.7 109553.0      0.6   92.2 109816.7
+  3|39|95 End                       0.2    6.9 109553.2      0.2   92.4 109816.9
+  -----End Subroutine 2 ---------
+1|31|25 Thermocouple Psychrometer38305.0 147837.5 147858.2   38305.0 147844.7 148121.9
+1|32|86 Do                          0.1 147837.6 147858.3      0.1 147844.8 148122.0
+  ----Subroutine 2---------------
+  3|1|85 Beginning of Subroutine    0.0    0.0 147858.3      0.0    0.0 148122.0
+  3|2|86 Do                         0.1    0.1 147858.4      0.1    0.1 148122.1
+ Output Flag Set @ 32 for Array 302
+  3|3|77 Real Time                  0.1    0.2 147858.5      1.0    1.1 148123.1
+ Output Data 3 Values
+  3|4|70 Sample                     0.1    0.3 147858.6      1.0    2.1 148124.1
+ Output Data 1 Values
+  3|5|70 Sample                     0.1    0.4 147858.7      1.0    3.1 148125.1
+ Output Data 1 Values
+  3|6|70 Sample                     0.1    0.5 147858.8      1.0    4.1 148126.1
+ Output Data 1 Values
+  3|7|70 Sample                     0.1    0.6 147858.9     13.6   17.7 148139.7
+ Output Data 22 Values
+  3|8|32 Z=Z+1                      0.6    1.2 147859.5      0.6   18.3 148140.3
+  3|9|86 Do                         0.1    1.3 147859.6      0.1   18.4 148140.4
+ Output Flag Set @ 39 for Array 309
+  3|10|77 Real Time                 0.1    1.4 147859.7      1.0   19.4 148141.4
+ Output Data 3 Values
+  3|11|70 Sample                    0.1    1.5 147859.8      1.0   20.4 148142.4
+ Output Data 1 Values
+  3|12|70 Sample                    0.1    1.6 147859.9      1.0   21.4 148143.4
+ Output Data 1 Values
+  3|13|70 Sample                    0.1    1.7 147860.0      1.0   22.4 148144.4
+ Output Data 1 Values
+  3|14|70 Sample                    0.1    1.8 147860.1     13.6   36.0 148158.0
+ Output Data 22 Values
+  3|15|32 Z=Z+1                     0.6    2.4 147860.7      0.6   36.6 148158.6
+  3|16|86 Do                        0.1    2.5 147860.8      0.1   36.7 148158.7
+ Output Flag Set @ 316 for Array 316
+  3|17|77 Real Time                 0.1    2.6 147860.9      1.0   37.7 148159.7
+ Output Data 3 Values
+  3|18|70 Sample                    0.1    2.7 147861.0      1.0   38.7 148160.7
+ Output Data 1 Values
+  3|19|70 Sample                    0.1    2.8 147861.1      1.0   39.7 148161.7
+ Output Data 1 Values
+  3|20|70 Sample                    0.1    2.9 147861.2      1.0   40.7 148162.7
+ Output Data 1 Values
+  3|21|70 Sample                    0.1    3.0 147861.3     13.6   54.3 148176.3
+ Output Data 22 Values
+  3|22|32 Z=Z+1                     0.6    3.6 147861.9      0.6   54.9 148176.9
+  3|23|86 Do                        0.1    3.7 147862.0      0.1   55.0 148177.0
+ Output Flag Set @ 323 for Array 323
+  3|24|77 Real Time                 0.1    3.8 147862.1      1.0   56.0 148178.0
+ Output Data 3 Values
+  3|25|70 Sample                    0.1    3.9 147862.2      1.0   57.0 148179.0
+ Output Data 1 Values
+  3|26|70 Sample                    0.1    4.0 147862.3      1.0   58.0 148180.0
+ Output Data 1 Values
+  3|27|70 Sample                    0.1    4.1 147862.4      1.0   59.0 148181.0
+ Output Data 1 Values
+  3|28|70 Sample                    0.1    4.2 147862.5     13.6   72.6 148194.6
+ Output Data 22 Values
+  3|29|32 Z=Z+1                     0.6    4.8 147863.1      0.6   73.2 148195.2
+  3|30|86 Do                        0.1    4.9 147863.2      0.1   73.3 148195.3
+ Output Flag Set @ 330 for Array 330
+  3|31|77 Real Time                 0.1    5.0 147863.3      1.0   74.3 148196.3
+ Output Data 3 Values
+  3|32|70 Sample                    0.1    5.1 147863.4      1.0   75.3 148197.3
+ Output Data 1 Values
+  3|33|70 Sample                    0.1    5.2 147863.5      1.0   76.3 148198.3
+ Output Data 1 Values
+  3|34|70 Sample                    0.1    5.3 147863.6      1.0   77.3 148199.3
+ Output Data 1 Values
+  3|35|70 Sample                    0.1    5.4 147863.7     13.6   90.9 148212.9
+ Output Data 22 Values
+  3|36|32 Z=Z+1                     0.6    6.0 147864.3      0.6   91.5 148213.5
+  3|37|86 Do                        0.1    6.1 147864.4      0.1   91.6 148213.6
+  3|38|32 Z=Z+1                     0.6    6.7 147865.0      0.6   92.2 148214.2
+  3|39|95 End                       0.2    6.9 147865.2      0.2   92.4 148214.4
+  -----End Subroutine 2 ---------
+1|33|25 Thermocouple Psychrometer38305.0 186142.6 186170.2   38305.0 186149.8 186519.4
+1|34|86 Do                          0.1 186142.7 186170.3      0.1 186149.9 186519.5
+  ----Subroutine 2---------------
+  3|1|85 Beginning of Subroutine    0.0    0.0 186170.3      0.0    0.0 186519.5
+  3|2|86 Do                         0.1    0.1 186170.4      0.1    0.1 186519.6
+ Output Flag Set @ 32 for Array 302
+  3|3|77 Real Time                  0.1    0.2 186170.5      1.0    1.1 186520.6
+ Output Data 3 Values
+  3|4|70 Sample                     0.1    0.3 186170.6      1.0    2.1 186521.6
+ Output Data 1 Values
+  3|5|70 Sample                     0.1    0.4 186170.7      1.0    3.1 186522.6
+ Output Data 1 Values
+  3|6|70 Sample                     0.1    0.5 186170.8      1.0    4.1 186523.6
+ Output Data 1 Values
+  3|7|70 Sample                     0.1    0.6 186170.9     13.6   17.7 186537.2
+ Output Data 22 Values
+  3|8|32 Z=Z+1                      0.6    1.2 186171.5      0.6   18.3 186537.8
+  3|9|86 Do                         0.1    1.3 186171.6      0.1   18.4 186537.9
+ Output Flag Set @ 39 for Array 309
+  3|10|77 Real Time                 0.1    1.4 186171.7      1.0   19.4 186538.9
+ Output Data 3 Values
+  3|11|70 Sample                    0.1    1.5 186171.8      1.0   20.4 186539.9
+ Output Data 1 Values
+  3|12|70 Sample                    0.1    1.6 186171.9      1.0   21.4 186540.9
+ Output Data 1 Values
+  3|13|70 Sample                    0.1    1.7 186172.0      1.0   22.4 186541.9
+ Output Data 1 Values
+  3|14|70 Sample                    0.1    1.8 186172.1     13.6   36.0 186555.5
+ Output Data 22 Values
+  3|15|32 Z=Z+1                     0.6    2.4 186172.7      0.6   36.6 186556.1
+  3|16|86 Do                        0.1    2.5 186172.8      0.1   36.7 186556.2
+ Output Flag Set @ 316 for Array 316
+  3|17|77 Real Time                 0.1    2.6 186172.9      1.0   37.7 186557.2
+ Output Data 3 Values
+  3|18|70 Sample                    0.1    2.7 186173.0      1.0   38.7 186558.2
+ Output Data 1 Values
+  3|19|70 Sample                    0.1    2.8 186173.1      1.0   39.7 186559.2
+ Output Data 1 Values
+  3|20|70 Sample                    0.1    2.9 186173.2      1.0   40.7 186560.2
+ Output Data 1 Values
+  3|21|70 Sample                    0.1    3.0 186173.3     13.6   54.3 186573.8
+ Output Data 22 Values
+  3|22|32 Z=Z+1                     0.6    3.6 186173.9      0.6   54.9 186574.4
+  3|23|86 Do                        0.1    3.7 186174.0      0.1   55.0 186574.5
+ Output Flag Set @ 323 for Array 323
+  3|24|77 Real Time                 0.1    3.8 186174.1      1.0   56.0 186575.5
+ Output Data 3 Values
+  3|25|70 Sample                    0.1    3.9 186174.2      1.0   57.0 186576.5
+ Output Data 1 Values
+  3|26|70 Sample                    0.1    4.0 186174.3      1.0   58.0 186577.5
+ Output Data 1 Values
+  3|27|70 Sample                    0.1    4.1 186174.4      1.0   59.0 186578.5
+ Output Data 1 Values
+  3|28|70 Sample                    0.1    4.2 186174.5     13.6   72.6 186592.1
+ Output Data 22 Values
+  3|29|32 Z=Z+1                     0.6    4.8 186175.1      0.6   73.2 186592.7
+  3|30|86 Do                        0.1    4.9 186175.2      0.1   73.3 186592.8
+ Output Flag Set @ 330 for Array 330
+  3|31|77 Real Time                 0.1    5.0 186175.3      1.0   74.3 186593.8
+ Output Data 3 Values
+  3|32|70 Sample                    0.1    5.1 186175.4      1.0   75.3 186594.8
+ Output Data 1 Values
+  3|33|70 Sample                    0.1    5.2 186175.5      1.0   76.3 186595.8
+ Output Data 1 Values
+  3|34|70 Sample                    0.1    5.3 186175.6      1.0   77.3 186596.8
+ Output Data 1 Values
+  3|35|70 Sample                    0.1    5.4 186175.7     13.6   90.9 186610.4
+ Output Data 22 Values
+  3|36|32 Z=Z+1                     0.6    6.0 186176.3      0.6   91.5 186611.0
+  3|37|86 Do                        0.1    6.1 186176.4      0.1   91.6 186611.1
+  3|38|32 Z=Z+1                     0.6    6.7 186177.0      0.6   92.2 186611.7
+  3|39|95 End                       0.2    6.9 186177.2      0.2   92.4 186611.9
+  -----End Subroutine 2 ---------
+1|35|95 End                         0.2 186142.9 186177.4      0.2 186150.1 186612.1
+1|36|95 End                         0.2 186143.1 186177.6      0.2 186150.3 186612.3
+1|37|96 Serial Out                  0.2 186143.3 186177.8      0.2 186150.5 186612.5
+
+Program Table 1 Execution Interval   60.000 Seconds
+
+Table 1 Estimated Total Program Execution Time in msec 186177.8 w/Output 186612.5
+
+Table 1 Estimated Total Final Storage Locations used per day 35424
+
+
+
+Estimated Total Final Storage Locations used per day 35424

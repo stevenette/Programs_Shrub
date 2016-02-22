@@ -1,0 +1,1347 @@
+};CR7
+;CR7_SOILANDSTEM_JULY2015_v2.dld
+;$
+;:dT_1     :dT_2     :dT_3     :dT_4     :dT_5     
+;:dT_6     :dT_7     :Logger   :A3497set :BattVolt 
+;:stemT_1  :stemT_2  :stemT_3  :stemT_4  :stemT_5  
+;:stemT_6  :stemT_7  :stemT_8  :stemT_9  :stemT_10 
+;:stemT_11 :stemT_12 :stemT_13 :stemT_14 :stemT_15 
+;:stemT_16 :stemT_17 :stemT_18 :stemT_19 :stemT_20 
+;:stemT_21 :stemT_22 :stemT_23 :stemT_24 :stemT_25 
+;:stemT_26 :stemT_27 :stemT_28 :stemT_29 :stemT_30 
+;:stemT_31 :stemT_32 :stemT_33 :stemT_34 :stemT_35 
+;:stemT_36 :stemT_37 :stemT_38 :stemT_39 :stemT_40 
+;:stemT_41 :stemT_42 :stemT_43 :stemT_44 :stemT_45 
+;:stemT_46 :stemT_47 :stemT_48 :stemT_49 :stemT_50 
+;:stemT_51 :stemT_52 :stemT_53 :stemT_54 :stemT_55 
+;:stemT_56 :stemT_57 :stemT_58 :stemT_59 :stemT_60 
+;:stemT_61 :stemT_62 :stemT_63 :stemT_64 :stemT_65 
+;:stemT_66 :stemT_67 :stemT_68 :stemT_69 :stemT_70 
+;:stemT_71 :stemT_72 :stemT_73 :stemT_74 :stemT_75 
+;:stemT_76 :stemT_77 :stemT_78 :stemT_79 :stemT_80 
+;:stemT_81 :stemT_82 :stemT_83 :stemT_84 :stemT_85 
+;:stemT_86 :stemT_87 :stemT_88 :stemT_89 :stemT_90 
+;:stemT_91 :stemT_92 :stemT_93 :stemT_94 :stemT_95 
+;:stemT_96 :stemT_97 :stemT_98 :stemT_99 :stemT_100
+;:stemT_101:stemT_102:stemT_103:stemT_104:stemT_105
+;:stemT_106:stemT_107:stemT_108:stemT_109:stemT_110
+;:StemPsyID:cardT3   :cardT1   :soilT_1  :soilT_2  
+;:soilT_3  :soilT_4  :soilT_5  :soilT_6  :soilT_7  
+;:soilT_8  :soilT_9  :soilT_10 :soilT_11 :soilT_12 
+;:soilT_13 :soilT_14 :soilT_15 :soilT_16 :soilT_17 
+;:soilT_18 :soilT_19 :soilT_20 :soilT_21 :soilT_22 
+;:soilT_23 :soilT_24 :soilT_25 :soilT_26 :soilT_27 
+;:soilT_28 :soilT_29 :soilT_30 :soilT_31 :soilT_32 
+;:soilT_33 :soilT_34 :soilT_35 :soilT_36 :soilT_37 
+;:soilT_38 :soilT_39 :soilT_40 :soilT_41 :soilT_42 
+;:soilT_43 :soilT_44 :soilT_45 :soilT_46 :soilT_47 
+;:soilT_48 :soilT_49 :soilT_50 :soilT_51 :soilT_52 
+;:soilT_53 :soilT_54 :soilT_55 :soilT_56 :soilT_57 
+;:soilT_58 :soilT_59 :soilT_60 :soilT_61 :soilT_62 
+;:soilT_63 :soilT_64 :soilT_65 :soilT_66 :soilT_67 
+;:soilT_68 :soilT_69 :soilT_70 :soilT_71 :soilT_72 
+;:soilT_73 :soilT_74 :soilT_75 :soilT_76 :soilT_77 
+;:soilT_78 :soilT_79 :soilT_80 :soilT_81 :soilT_82 
+;:soilT_83 :soilT_84 :soilT_85 :soilT_86 :soilT_87 
+;:soilT_88 :soilT_89 :soilT_90 :soilT_91 :soilT_92 
+;:soilT_93 :soilT_94 :soilT_95 :soilT_96 :soilT_97 
+;:soilT_98 :soilT_99 :soilT_100:soilT_101:soilT_102
+;:soilT_103:soilT_104:soilT_105:soilT_106:soilT_107
+;:soilT_108:soilT_109:soilT_110:SoilPsyID
+;$
+
+;%
+;Final Storage Label File for:  CR7_SOILANDSTEM_JULY2015_v2.csi
+;Date:  7/19/2015
+;Time:  13:05:39
+;
+;101 Output_Table  10.00 Min
+;1 101 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 cardT1  L
+;7 dT_1  L
+;8 dT_2  L
+;9 dT_3  L
+;10 dT_4  L
+;11 dT_5  L
+;12 dT_6  L
+;13 dT_7  L
+;
+;302 Output_Table  10.00 Min
+;1 302 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 StemPsyID  L
+;8 stemT_1  L
+;9 stemT_2  L
+;10 stemT_3  L
+;11 stemT_4  L
+;12 stemT_5  L
+;13 stemT_6  L
+;14 stemT_7  L
+;15 stemT_8  L
+;16 stemT_9  L
+;17 stemT_10  L
+;18 stemT_11  L
+;19 stemT_12  L
+;20 stemT_13  L
+;21 stemT_14  L
+;22 stemT_15  L
+;23 stemT_16  L
+;24 stemT_17  L
+;25 stemT_18  L
+;26 stemT_19  L
+;27 stemT_20  L
+;28 stemT_21  L
+;29 stemT_22  L
+;
+;309 Output_Table  10.00 Min
+;1 309 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 StemPsyID  L
+;8 stemT_23  L
+;9 stemT_24  L
+;10 stemT_25  L
+;11 stemT_26  L
+;12 stemT_27  L
+;13 stemT_28  L
+;14 stemT_29  L
+;15 stemT_30  L
+;16 stemT_31  L
+;17 stemT_32  L
+;18 stemT_33  L
+;19 stemT_34  L
+;20 stemT_35  L
+;21 stemT_36  L
+;22 stemT_37  L
+;23 stemT_38  L
+;24 stemT_39  L
+;25 stemT_40  L
+;26 stemT_41  L
+;27 stemT_42  L
+;28 stemT_43  L
+;29 stemT_44  L
+;
+;316 Output_Table  10.00 Min
+;1 316 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 StemPsyID  L
+;8 stemT_45  L
+;9 stemT_46  L
+;10 stemT_47  L
+;11 stemT_48  L
+;12 stemT_49  L
+;13 stemT_50  L
+;14 stemT_51  L
+;15 stemT_52  L
+;16 stemT_53  L
+;17 stemT_54  L
+;18 stemT_55  L
+;19 stemT_56  L
+;20 stemT_57  L
+;21 stemT_58  L
+;22 stemT_59  L
+;23 stemT_60  L
+;24 stemT_61  L
+;25 stemT_62  L
+;26 stemT_63  L
+;27 stemT_64  L
+;28 stemT_65  L
+;29 stemT_66  L
+;
+;323 Output_Table  10.00 Min
+;1 323 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 StemPsyID  L
+;8 stemT_67  L
+;9 stemT_68  L
+;10 stemT_69  L
+;11 stemT_70  L
+;12 stemT_71  L
+;13 stemT_72  L
+;14 stemT_73  L
+;15 stemT_74  L
+;16 stemT_75  L
+;17 stemT_76  L
+;18 stemT_77  L
+;19 stemT_78  L
+;20 stemT_79  L
+;21 stemT_80  L
+;22 stemT_81  L
+;23 stemT_82  L
+;24 stemT_83  L
+;25 stemT_84  L
+;26 stemT_85  L
+;27 stemT_86  L
+;28 stemT_87  L
+;29 stemT_88  L
+;
+;330 Output_Table  10.00 Min
+;1 330 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 StemPsyID  L
+;8 stemT_89  L
+;9 stemT_90  L
+;10 stemT_91  L
+;11 stemT_92  L
+;12 stemT_93  L
+;13 stemT_94  L
+;14 stemT_95  L
+;15 stemT_96  L
+;16 stemT_97  L
+;17 stemT_98  L
+;18 stemT_99  L
+;19 stemT_100  L
+;20 stemT_101  L
+;21 stemT_102  L
+;22 stemT_103  L
+;23 stemT_104  L
+;24 stemT_105  L
+;25 stemT_106  L
+;26 stemT_107  L
+;27 stemT_108  L
+;28 stemT_109  L
+;29 stemT_110  L
+;
+;302 Output_Table  10.00 Min
+;1 302 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 StemPsyID  L
+;8 stemT_1  L
+;9 stemT_2  L
+;10 stemT_3  L
+;11 stemT_4  L
+;12 stemT_5  L
+;13 stemT_6  L
+;14 stemT_7  L
+;15 stemT_8  L
+;16 stemT_9  L
+;17 stemT_10  L
+;18 stemT_11  L
+;19 stemT_12  L
+;20 stemT_13  L
+;21 stemT_14  L
+;22 stemT_15  L
+;23 stemT_16  L
+;24 stemT_17  L
+;25 stemT_18  L
+;26 stemT_19  L
+;27 stemT_20  L
+;28 stemT_21  L
+;29 stemT_22  L
+;
+;309 Output_Table  10.00 Min
+;1 309 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 StemPsyID  L
+;8 stemT_23  L
+;9 stemT_24  L
+;10 stemT_25  L
+;11 stemT_26  L
+;12 stemT_27  L
+;13 stemT_28  L
+;14 stemT_29  L
+;15 stemT_30  L
+;16 stemT_31  L
+;17 stemT_32  L
+;18 stemT_33  L
+;19 stemT_34  L
+;20 stemT_35  L
+;21 stemT_36  L
+;22 stemT_37  L
+;23 stemT_38  L
+;24 stemT_39  L
+;25 stemT_40  L
+;26 stemT_41  L
+;27 stemT_42  L
+;28 stemT_43  L
+;29 stemT_44  L
+;
+;316 Output_Table  10.00 Min
+;1 316 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 StemPsyID  L
+;8 stemT_45  L
+;9 stemT_46  L
+;10 stemT_47  L
+;11 stemT_48  L
+;12 stemT_49  L
+;13 stemT_50  L
+;14 stemT_51  L
+;15 stemT_52  L
+;16 stemT_53  L
+;17 stemT_54  L
+;18 stemT_55  L
+;19 stemT_56  L
+;20 stemT_57  L
+;21 stemT_58  L
+;22 stemT_59  L
+;23 stemT_60  L
+;24 stemT_61  L
+;25 stemT_62  L
+;26 stemT_63  L
+;27 stemT_64  L
+;28 stemT_65  L
+;29 stemT_66  L
+;
+;323 Output_Table  10.00 Min
+;1 323 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 StemPsyID  L
+;8 stemT_67  L
+;9 stemT_68  L
+;10 stemT_69  L
+;11 stemT_70  L
+;12 stemT_71  L
+;13 stemT_72  L
+;14 stemT_73  L
+;15 stemT_74  L
+;16 stemT_75  L
+;17 stemT_76  L
+;18 stemT_77  L
+;19 stemT_78  L
+;20 stemT_79  L
+;21 stemT_80  L
+;22 stemT_81  L
+;23 stemT_82  L
+;24 stemT_83  L
+;25 stemT_84  L
+;26 stemT_85  L
+;27 stemT_86  L
+;28 stemT_87  L
+;29 stemT_88  L
+;
+;330 Output_Table  10.00 Min
+;1 330 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 StemPsyID  L
+;8 stemT_89  L
+;9 stemT_90  L
+;10 stemT_91  L
+;11 stemT_92  L
+;12 stemT_93  L
+;13 stemT_94  L
+;14 stemT_95  L
+;15 stemT_96  L
+;16 stemT_97  L
+;17 stemT_98  L
+;18 stemT_99  L
+;19 stemT_100  L
+;20 stemT_101  L
+;21 stemT_102  L
+;22 stemT_103  L
+;23 stemT_104  L
+;24 stemT_105  L
+;25 stemT_106  L
+;26 stemT_107  L
+;27 stemT_108  L
+;28 stemT_109  L
+;29 stemT_110  L
+;
+;302 Output_Table  10.00 Min
+;1 302 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 SoilPsyID  L
+;8 soilT_1  L
+;9 soilT_2  L
+;10 soilT_3  L
+;11 soilT_4  L
+;12 soilT_5  L
+;13 soilT_6  L
+;14 soilT_7  L
+;15 soilT_8  L
+;16 soilT_9  L
+;17 soilT_10  L
+;18 soilT_11  L
+;19 soilT_12  L
+;20 soilT_13  L
+;21 soilT_14  L
+;22 soilT_15  L
+;23 soilT_16  L
+;24 soilT_17  L
+;25 soilT_18  L
+;26 soilT_19  L
+;27 soilT_20  L
+;28 soilT_21  L
+;29 soilT_22  L
+;
+;309 Output_Table  10.00 Min
+;1 309 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 SoilPsyID  L
+;8 soilT_23  L
+;9 soilT_24  L
+;10 soilT_25  L
+;11 soilT_26  L
+;12 soilT_27  L
+;13 soilT_28  L
+;14 soilT_29  L
+;15 soilT_30  L
+;16 soilT_31  L
+;17 soilT_32  L
+;18 soilT_33  L
+;19 soilT_34  L
+;20 soilT_35  L
+;21 soilT_36  L
+;22 soilT_37  L
+;23 soilT_38  L
+;24 soilT_39  L
+;25 soilT_40  L
+;26 soilT_41  L
+;27 soilT_42  L
+;28 soilT_43  L
+;29 soilT_44  L
+;
+;316 Output_Table  10.00 Min
+;1 316 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 SoilPsyID  L
+;8 soilT_45  L
+;9 soilT_46  L
+;10 soilT_47  L
+;11 soilT_48  L
+;12 soilT_49  L
+;13 soilT_50  L
+;14 soilT_51  L
+;15 soilT_52  L
+;16 soilT_53  L
+;17 soilT_54  L
+;18 soilT_55  L
+;19 soilT_56  L
+;20 soilT_57  L
+;21 soilT_58  L
+;22 soilT_59  L
+;23 soilT_60  L
+;24 soilT_61  L
+;25 soilT_62  L
+;26 soilT_63  L
+;27 soilT_64  L
+;28 soilT_65  L
+;29 soilT_66  L
+;
+;323 Output_Table  10.00 Min
+;1 323 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 SoilPsyID  L
+;8 soilT_67  L
+;9 soilT_68  L
+;10 soilT_69  L
+;11 soilT_70  L
+;12 soilT_71  L
+;13 soilT_72  L
+;14 soilT_73  L
+;15 soilT_74  L
+;16 soilT_75  L
+;17 soilT_76  L
+;18 soilT_77  L
+;19 soilT_78  L
+;20 soilT_79  L
+;21 soilT_80  L
+;22 soilT_81  L
+;23 soilT_82  L
+;24 soilT_83  L
+;25 soilT_84  L
+;26 soilT_85  L
+;27 soilT_86  L
+;28 soilT_87  L
+;29 soilT_88  L
+;
+;330 Output_Table  10.00 Min
+;1 330 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 SoilPsyID  L
+;8 soilT_89  L
+;9 soilT_90  L
+;10 soilT_91  L
+;11 soilT_92  L
+;12 soilT_93  L
+;13 soilT_94  L
+;14 soilT_95  L
+;15 soilT_96  L
+;16 soilT_97  L
+;17 soilT_98  L
+;18 soilT_99  L
+;19 soilT_100  L
+;20 soilT_101  L
+;21 soilT_102  L
+;22 soilT_103  L
+;23 soilT_104  L
+;24 soilT_105  L
+;25 soilT_106  L
+;26 soilT_107  L
+;27 soilT_108  L
+;28 soilT_109  L
+;29 soilT_110  L
+;
+;302 Output_Table  10.00 Min
+;1 302 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 SoilPsyID  L
+;8 soilT_1  L
+;9 soilT_2  L
+;10 soilT_3  L
+;11 soilT_4  L
+;12 soilT_5  L
+;13 soilT_6  L
+;14 soilT_7  L
+;15 soilT_8  L
+;16 soilT_9  L
+;17 soilT_10  L
+;18 soilT_11  L
+;19 soilT_12  L
+;20 soilT_13  L
+;21 soilT_14  L
+;22 soilT_15  L
+;23 soilT_16  L
+;24 soilT_17  L
+;25 soilT_18  L
+;26 soilT_19  L
+;27 soilT_20  L
+;28 soilT_21  L
+;29 soilT_22  L
+;
+;309 Output_Table  10.00 Min
+;1 309 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 SoilPsyID  L
+;8 soilT_23  L
+;9 soilT_24  L
+;10 soilT_25  L
+;11 soilT_26  L
+;12 soilT_27  L
+;13 soilT_28  L
+;14 soilT_29  L
+;15 soilT_30  L
+;16 soilT_31  L
+;17 soilT_32  L
+;18 soilT_33  L
+;19 soilT_34  L
+;20 soilT_35  L
+;21 soilT_36  L
+;22 soilT_37  L
+;23 soilT_38  L
+;24 soilT_39  L
+;25 soilT_40  L
+;26 soilT_41  L
+;27 soilT_42  L
+;28 soilT_43  L
+;29 soilT_44  L
+;
+;316 Output_Table  10.00 Min
+;1 316 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 SoilPsyID  L
+;8 soilT_45  L
+;9 soilT_46  L
+;10 soilT_47  L
+;11 soilT_48  L
+;12 soilT_49  L
+;13 soilT_50  L
+;14 soilT_51  L
+;15 soilT_52  L
+;16 soilT_53  L
+;17 soilT_54  L
+;18 soilT_55  L
+;19 soilT_56  L
+;20 soilT_57  L
+;21 soilT_58  L
+;22 soilT_59  L
+;23 soilT_60  L
+;24 soilT_61  L
+;25 soilT_62  L
+;26 soilT_63  L
+;27 soilT_64  L
+;28 soilT_65  L
+;29 soilT_66  L
+;
+;323 Output_Table  10.00 Min
+;1 323 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 SoilPsyID  L
+;8 soilT_67  L
+;9 soilT_68  L
+;10 soilT_69  L
+;11 soilT_70  L
+;12 soilT_71  L
+;13 soilT_72  L
+;14 soilT_73  L
+;15 soilT_74  L
+;16 soilT_75  L
+;17 soilT_76  L
+;18 soilT_77  L
+;19 soilT_78  L
+;20 soilT_79  L
+;21 soilT_80  L
+;22 soilT_81  L
+;23 soilT_82  L
+;24 soilT_83  L
+;25 soilT_84  L
+;26 soilT_85  L
+;27 soilT_86  L
+;28 soilT_87  L
+;29 soilT_88  L
+;
+;330 Output_Table  10.00 Min
+;1 330 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 SoilPsyID  L
+;8 soilT_89  L
+;9 soilT_90  L
+;10 soilT_91  L
+;11 soilT_92  L
+;12 soilT_93  L
+;13 soilT_94  L
+;14 soilT_95  L
+;15 soilT_96  L
+;16 soilT_97  L
+;17 soilT_98  L
+;18 soilT_99  L
+;19 soilT_100  L
+;20 soilT_101  L
+;21 soilT_102  L
+;22 soilT_103  L
+;23 soilT_104  L
+;24 soilT_105  L
+;25 soilT_106  L
+;26 soilT_107  L
+;27 soilT_108  L
+;28 soilT_109  L
+;29 soilT_110  L
+;
+;302 Output_Table  10.00 Min
+;1 302 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 SoilPsyID  L
+;8 soilT_1  L
+;9 soilT_2  L
+;10 soilT_3  L
+;11 soilT_4  L
+;12 soilT_5  L
+;13 soilT_6  L
+;14 soilT_7  L
+;15 soilT_8  L
+;16 soilT_9  L
+;17 soilT_10  L
+;18 soilT_11  L
+;19 soilT_12  L
+;20 soilT_13  L
+;21 soilT_14  L
+;22 soilT_15  L
+;23 soilT_16  L
+;24 soilT_17  L
+;25 soilT_18  L
+;26 soilT_19  L
+;27 soilT_20  L
+;28 soilT_21  L
+;29 soilT_22  L
+;
+;309 Output_Table  10.00 Min
+;1 309 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 SoilPsyID  L
+;8 soilT_23  L
+;9 soilT_24  L
+;10 soilT_25  L
+;11 soilT_26  L
+;12 soilT_27  L
+;13 soilT_28  L
+;14 soilT_29  L
+;15 soilT_30  L
+;16 soilT_31  L
+;17 soilT_32  L
+;18 soilT_33  L
+;19 soilT_34  L
+;20 soilT_35  L
+;21 soilT_36  L
+;22 soilT_37  L
+;23 soilT_38  L
+;24 soilT_39  L
+;25 soilT_40  L
+;26 soilT_41  L
+;27 soilT_42  L
+;28 soilT_43  L
+;29 soilT_44  L
+;
+;316 Output_Table  10.00 Min
+;1 316 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 SoilPsyID  L
+;8 soilT_45  L
+;9 soilT_46  L
+;10 soilT_47  L
+;11 soilT_48  L
+;12 soilT_49  L
+;13 soilT_50  L
+;14 soilT_51  L
+;15 soilT_52  L
+;16 soilT_53  L
+;17 soilT_54  L
+;18 soilT_55  L
+;19 soilT_56  L
+;20 soilT_57  L
+;21 soilT_58  L
+;22 soilT_59  L
+;23 soilT_60  L
+;24 soilT_61  L
+;25 soilT_62  L
+;26 soilT_63  L
+;27 soilT_64  L
+;28 soilT_65  L
+;29 soilT_66  L
+;
+;323 Output_Table  10.00 Min
+;1 323 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 SoilPsyID  L
+;8 soilT_67  L
+;9 soilT_68  L
+;10 soilT_69  L
+;11 soilT_70  L
+;12 soilT_71  L
+;13 soilT_72  L
+;14 soilT_73  L
+;15 soilT_74  L
+;16 soilT_75  L
+;17 soilT_76  L
+;18 soilT_77  L
+;19 soilT_78  L
+;20 soilT_79  L
+;21 soilT_80  L
+;22 soilT_81  L
+;23 soilT_82  L
+;24 soilT_83  L
+;25 soilT_84  L
+;26 soilT_85  L
+;27 soilT_86  L
+;28 soilT_87  L
+;29 soilT_88  L
+;
+;330 Output_Table  10.00 Min
+;1 330 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 Logger  L
+;6 A3497set  L
+;7 SoilPsyID  L
+;8 soilT_89  L
+;9 soilT_90  L
+;10 soilT_91  L
+;11 soilT_92  L
+;12 soilT_93  L
+;13 soilT_94  L
+;14 soilT_95  L
+;15 soilT_96  L
+;16 soilT_97  L
+;17 soilT_98  L
+;18 soilT_99  L
+;19 soilT_100  L
+;20 soilT_101  L
+;21 soilT_102  L
+;22 soilT_103  L
+;23 soilT_104  L
+;24 soilT_105  L
+;25 soilT_106  L
+;26 soilT_107  L
+;27 soilT_108  L
+;28 soilT_109  L
+;29 soilT_110  L
+;
+;
+;Estimated Total Final Storage Locations used per day 106272
+;%
+
+MODE 1
+SCAN RATE 60
+
+1:P92
+1:0
+2:10
+3:10
+
+2:P91
+1:10
+2:30
+
+3:P17
+1:1
+2:123
+
+4:P2
+1:7
+2:1
+3:2
+4:1
+5:1
+6:1.0
+7:0.0
+
+5:P30
+1:9
+2:8
+
+6:P77
+1:1220
+
+7:P70
+1:1
+2:8
+
+8:P70
+1:1
+2:123
+
+9:P70
+1:7
+2:1
+
+10:P86
+1:20
+
+11:P92
+1:0
+2:10
+3:30
+
+12:P30
+1:1
+2:9
+
+13:P30
+1:1
+2:121
+
+14:P25
+1:5
+2:11
+3:123
+4:2
+5:1
+6:1
+7:1
+8:1
+9:-2810
+10:1000
+11:1000
+12:3000
+13:0
+14:0
+15:20
+
+15:P86
+1:1
+
+16:P25
+1:5
+2:11
+3:123
+4:2
+5:1
+6:6
+7:1
+8:2
+9:-2810
+10:1000
+11:1000
+12:3000
+13:0
+14:0
+15:20
+
+17:P86
+1:1
+
+18:P95
+
+19:P95
+
+20:P92
+1:0004
+2:10
+3:12
+
+21:P91
+1:12
+2:30
+
+22:P86
+1:22
+
+23:P10
+1:10
+
+24:P30
+1:9
+2:8
+
+25:P17
+1:1
+2:122
+
+26:P92
+1:4
+2:10
+3:30
+
+27:P30
+1:3
+2:9
+
+28:P30
+1:1
+2:234
+
+29:P25
+1:5
+2:124
+3:122
+4:2
+5:3
+6:1
+7:1
+8:3
+9:-3000
+10:0000
+11:0000
+12:6000
+13:0000
+14:100
+15:20
+
+30:P86
+1:2
+
+31:P25
+1:5
+2:124
+3:122
+4:2
+5:3
+6:6
+7:1
+8:4
+9:-3000
+10:0000
+11:0000
+12:6000
+13:0000
+14:100
+15:20
+
+32:P86
+1:2
+
+33:P25
+1:5
+2:124
+3:122
+4:2
+5:3
+6:11
+7:1
+8:5
+9:-3000
+10:0000
+11:0000
+12:6000
+13:0000
+14:100
+15:20
+
+34:P86
+1:2
+
+35:P95
+
+36:P95
+
+37:P96
+1:30
+
+
+MODE 2
+SCAN RATE 0.0000
+
+
+MODE 3
+1:P85
+1:1
+
+2:P86
+1:10
+
+3:P77
+1:1220
+
+4:P70
+1:1
+2:8
+
+5:P70
+1:1
+2:9
+
+6:P70
+1:1
+2:121
+
+7:P70
+1:22
+2:11
+
+8:P32
+1:121
+
+9:P86
+1:10
+
+10:P77
+1:1220
+
+11:P70
+1:1
+2:8
+
+12:P70
+1:1
+2:9
+
+13:P70
+1:1
+2:121
+
+14:P70
+1:22
+2:33
+
+15:P32
+1:121
+
+16:P86
+1:10
+
+17:P77
+1:1220
+
+18:P70
+1:1
+2:8
+
+19:P70
+1:1
+2:9
+
+20:P70
+1:1
+2:121
+
+21:P70
+1:22
+2:55
+
+22:P32
+1:121
+
+23:P86
+1:10
+
+24:P77
+1:1220
+
+25:P70
+1:1
+2:8
+
+26:P70
+1:1
+2:9
+
+27:P70
+1:1
+2:121
+
+28:P70
+1:22
+2:77
+
+29:P32
+1:121
+
+30:P86
+1:10
+
+31:P77
+1:1220
+
+32:P70
+1:1
+2:8
+
+33:P70
+1:1
+2:9
+
+34:P70
+1:1
+2:121
+
+35:P70
+1:22
+2:99
+
+36:P32
+1:121
+
+37:P86
+1:20
+
+38:P32
+1:9
+
+39:P95
+
+40:P85
+1:2
+
+41:P86
+1:10
+
+42:P77
+1:1220
+
+43:P70
+1:1
+2:8
+
+44:P70
+1:1
+2:9
+
+45:P70
+1:1
+2:234
+
+46:P70
+1:22
+2:124
+
+47:P32
+1:234
+
+48:P86
+1:10
+
+49:P77
+1:1220
+
+50:P70
+1:1
+2:8
+
+51:P70
+1:1
+2:9
+
+52:P70
+1:1
+2:234
+
+53:P70
+1:22
+2:146
+
+54:P32
+1:234
+
+55:P86
+1:10
+
+56:P77
+1:1220
+
+57:P70
+1:1
+2:8
+
+58:P70
+1:1
+2:9
+
+59:P70
+1:1
+2:234
+
+60:P70
+1:22
+2:168
+
+61:P32
+1:234
+
+62:P86
+1:10
+
+63:P77
+1:1220
+
+64:P70
+1:1
+2:8
+
+65:P70
+1:1
+2:9
+
+66:P70
+1:1
+2:234
+
+67:P70
+1:22
+2:190
+
+68:P32
+1:234
+
+69:P86
+1:10
+
+70:P77
+1:1220
+
+71:P70
+1:1
+2:8
+
+72:P70
+1:1
+2:9
+
+73:P70
+1:1
+2:234
+
+74:P70
+1:22
+2:212
+
+75:P32
+1:234
+
+76:P86
+1:20
+
+77:P32
+1:9
+
+78:P95
+
+
+MODE 10
+1:234
+2:64
+
+
+MODE 12
+1:0
+2:0000
+
+

@@ -1,0 +1,58 @@
+'CR5000 Series Datalogger
+'To create a different opening program template, type in new
+'instructions and select Template | Save as Default Template
+'date:
+'program author:
+
+'Declare Public Variables
+'Example:
+Public PTemp, batt_volt
+
+
+
+
+'Declare Other Variables
+'Example:
+'Dim Counter
+
+Public par
+Public co2 
+
+'Declare Constants
+'Example:
+'CONST PI = 3.141592654	
+Const PAR_li190_dn=  6.94
+Const PAR_mult_Li_dn = 1000/(PAR_li190_dn  * 0.604)
+
+
+
+
+'Define Data Tables
+DataTable (Test,1,1000)
+	DataInterval (0,15,Sec,10)
+	Minimum (1,batt_volt,FP2,0,False)
+	Sample (1,PTemp,FP2)
+	Sample (1,par,FP2)
+EndTable
+
+'Define Subroutines
+'Sub
+	'EnterSub instructions here
+'EndSub
+
+'Main Program
+BeginProg
+	Scan (1,Sec,0,0)
+		PanelTemp (PTemp,250)
+		Battery (batt_volt)
+		 'par2 faces down added 3/16/10
+		VoltDiff (par,1,mV200C,11,TRUE,200,250,PAR_mult_Li_dn,0)
+		VoltDiff (co2,1,mV5000,12,TRUE,200,250,10,0)
+
+		'Enter other measurement instructions
+		'Call Output Tables
+		'Example:
+		CallTable Test
+	NextScan
+EndProg
+

@@ -1,0 +1,1207 @@
+;{CR7}
+;Program for soil and stem sensors-shrub site-deployed July 2015
+;
+*Table 1 Program
+  01: 60        Execution Interval (seconds)
+
+; measure stem psychrometers
+
+1:  If time is (P92)
+ 1: 0        Minutes into a
+ 2: 30       Minute Interval
+ 3: 10       Set Output Flag High
+
+2:  If Flag/Port (P91)
+ 1: 10       Do if Output Flag (Flag 0) is High
+ 2: 30       Then Do
+
+     3:  Panel Temperature (P17)
+      1: 1        In Card
+      2: 1        Loc [ ref1      ]
+
+     4:  Volt (Diff) (P2)
+      1: 7        Reps
+      2: 1        1500 ÊV Slow Range
+      3: 2        In Card
+      4: 1        DIFF Channel
+      5: 2        Loc [ dT_1      ]
+      6: 1.0      Mult
+      7: 0.0      Offset
+
+
+;label datalogger or plot number
+
+     5:  Z=F (P30)
+      1: 9        F
+      2: 9        Z LOC [ Logger    ]
+
+
+     6:  Real Time (P77)^27171
+      1: 1220     Year,Day,Hour/Minute (midnight = 2400)
+
+
+     7:  Sample (P70)^19973
+      1: 1        Reps
+      2: 9        Loc [ Logger    ]
+
+
+     8:  Sample (P70)^6805
+      1: 1        Reps
+      2: 1        Loc [ ref1      ]
+
+
+     9:  Sample (P70)^22733
+      1: 7        Reps
+      2: 2        Loc [ dT_1      ]
+
+
+     10:  Do (P86)
+      1: 20       Set Output Flag Low
+
+; measure stem psychrometers
+
+
+     11:  If time is (P92)
+      1: 0        Minutes into a
+      2: 30       Minute Interval
+      3: 30       Then Do
+
+
+
+; initialize the set number (numbered groups of five)
+
+
+          12:  Z=F (P30)
+           1: 1        F
+           2: 10       Z LOC [ A3497set  ]
+
+
+
+; stem psychrometer, Probes #1-5 (1st Cooling Block)
+
+          13:  Thermocouple Psychrometer (P25)
+           1: 5        Psychrometers per A3497
+           2: 11       Loc [ temp_1    ]
+           3: 1        Reference Temperature Loc [ ref1      ]
+           4: 2        2=Measure HI WRT GND, 1=LO
+           5: 1        In Card
+           6: 1        In Chan
+           7: 1        Ex Card
+           8: 1        Ex Chan
+           9: -2810    mV Excitation
+          10: 1000     Heating (time units = 0.01 sec)
+          11: 1000     Delay before 0 measurement
+          12: 3000     Cooling Duration
+          13: 0        Delay before wet bulb measurement
+          14: 0        Delay between wet bulb measurement
+          15: 20       Wet bulb measurements per psychrometer
+
+
+          14:  Z=F (P30)
+           1: 1        F
+           2: 116      Z LOC [ PsychID   ]
+
+
+          15:  Do (P86)
+           1: 1        Call Subroutine 1
+
+
+
+; stem psychrometer, Probes #6-7 (2nd Cooling Block)
+
+
+          16:  Thermocouple Psychrometer (P25)
+           1: 2        Psychrometers per A3497
+           2: 11       Loc [ temp_1    ]
+           3: 1        Reference Temperature Loc [ ref1      ]
+           4: 2        2=Measure HI WRT GND, 1=LO
+           5: 1        In Card
+           6: 6        In Chan
+           7: 1        Ex Card
+           8: 2        Ex Chan
+           9: -2810    mV Excitation
+          10: 1000     Heating (time units = 0.01 sec)
+          11: 1000     Delay before 0 measurement
+          12: 3000     Cooling Duration
+          13: 0        Delay before wet bulb measurement
+          14: 0        Delay between wet bulb measurement
+          15: 20       Wet bulb measurements per psychrometer
+
+
+          17:  Do (P86)
+           1: 1        Call Subroutine 1
+
+18:  End (P95)
+
+19:  End (P95)
+
+; soil psychrometers
+
+20:  If time is (P92)
+ 1: 0004     Minutes into a
+ 2: 30       Minute Interval
+ 3: 12       Set Flag 2 High
+
+
+21:  If Flag/Port (P91)
+ 1: 12       Do if Flag 2 is High
+ 2: 30       Then Do
+
+
+     22:  Do (P86)
+      1: 22       Set Flag 2 Low
+
+
+
+     23:  Battery Voltage (P10)
+      1: 117      Loc [ BattVolt  ]
+
+;label datalogger or plot number
+
+     24:  Z=F (P30)
+      1: 9        F
+      2: 233      Z LOC [ Logger2   ]
+
+;collect all reference temperatures
+
+     25:  Panel Temperature (P17)
+      1: 1        In Card
+      2: 120      Loc [ card3     ]
+
+
+
+;every hour - measure the psychrometers
+
+     26:  If time is (P92)
+      1: 4        Minutes into a
+      2: 30       Minute Interval
+      3: 30       Then Do
+
+; initialize the set number (numbered groups of five)
+
+
+          27:  Z=F (P30)
+           1: 1        F
+           2: 231      Z LOC [ A3497set2 ]
+
+; soil psychrometer, measurement logger set block 1
+
+          28:  Thermocouple Psychrometer (P25)
+           1: 5        Psychrometers per A3497
+           2: 121      Loc [ temp2_1   ]
+           3: 120      Reference Temperature Loc [ card3     ]
+           4: 2        2=Measure HI WRT GND, 1=LO
+           5: 3        In Card
+           6: 1        In Chan
+           7: 1        Ex Card
+           8: 3        Ex Chan
+           9: -3000    mV Excitation
+          10: 0000     Heating (time units = 0.01 sec)
+          11: 0000     Delay before 0 measurement
+          12: 6000     Cooling Duration
+          13: 0000     Delay before wet bulb measurement
+          14: 100      Delay between wet bulb measurement
+          15: 20       Wet bulb measurements per psychrometer
+
+
+          29:  Z=F (P30)
+           1: 1        F
+           2: 232      Z LOC [ PsychID2  ]
+
+
+          30:  Do (P86)
+           1: 2        Call Subroutine 2
+
+; soil psychrometer, measurement logger set block 2
+
+
+          31:  Thermocouple Psychrometer (P25)
+           1: 5        Psychrometers per A3497
+           2: 121      Loc [ temp2_1   ]
+           3: 120      Reference Temperature Loc [ card3     ]
+           4: 2        2=Measure HI WRT GND, 1=LO
+           5: 3        In Card
+           6: 6        In Chan
+           7: 1        Ex Card
+           8: 4        Ex Chan
+           9: -3000    mV Excitation
+          10: 0000     Heating (time units = 0.01 sec)
+          11: 0000     Delay before 0 measurement
+          12: 6000     Cooling Duration
+          13: 0000     Delay before wet bulb measurement
+          14: 100      Delay between wet bulb measurement
+          15: 20       Wet bulb measurements per psychrometer
+
+
+          32:  Do (P86)
+           1: 2        Call Subroutine 2
+
+; soil psychrometer, measurement logger set block 3
+
+          33:  Thermocouple Psychrometer (P25)
+           1: 4        Psychrometers per A3497
+           2: 121      Loc [ temp2_1   ]
+           3: 120      Reference Temperature Loc [ card3     ]
+           4: 2        2=Measure HI WRT GND, 1=LO
+           5: 3        In Card
+           6: 11       In Chan
+           7: 1        Ex Card
+           8: 5        Ex Chan
+           9: -3000    mV Excitation
+          10: 0000     Heating (time units = 0.01 sec)
+          11: 0000     Delay before 0 measurement
+          12: 6000     Cooling Duration
+          13: 0000     Delay before wet bulb measurement
+          14: 100      Delay between wet bulb measurement
+          15: 20       Wet bulb measurements per psychrometer
+
+
+          34:  Do (P86)
+           1: 2        Call Subroutine 2
+
+
+     35:  End (P95)
+
+
+36:  End (P95)
+
+
+37:  Serial Out (P96)
+ 1: 30       Storage Module
+
+
+*Table 2 Program
+  02: 0.0000    Execution Interval (seconds)
+
+*Table 3 Subroutines
+
+1:  Beginning of Subroutine (P85)
+ 1: 1        Subroutine 1
+
+; output the first sensor
+
+     2:  Do (P86)
+      1: 10       Set Output Flag High
+
+
+     3:  Real Time (P77)^16427
+      1: 1220     Year,Day,Hour/Minute (midnight = 2400)
+
+
+     4:  Sample (P70)^25314
+      1: 1        Reps
+      2: 9        Loc [ Logger    ]
+
+
+
+     5:  Sample (P70)^26806
+      1: 1        Reps
+      2: 10       Loc [ A3497set  ]
+
+
+     6:  Sample (P70)^20951
+      1: 1        Reps
+      2: 116      Loc [ PsychID   ]
+
+
+     7:  Sample (P70)^22689
+      1: 22       Reps
+      2: 11       Loc [ temp_1    ]
+
+;output the second sensor
+
+     8:  Z=Z+1 (P32)
+      1: 116      Z LOC [ PsychID   ]
+
+
+     9:  Do (P86)
+      1: 10       Set Output Flag High
+
+
+     10:  Real Time (P77)^27314
+      1: 1220     Year,Day,Hour/Minute (midnight = 2400)
+
+
+     11:  Sample (P70)^8248
+      1: 1        Reps
+      2: 9        Loc [ Logger    ]
+
+
+     12:  Sample (P70)^6212
+      1: 1        Reps
+      2: 10       Loc [ A3497set  ]
+
+
+     13:  Sample (P70)^21191
+      1: 1        Reps
+      2: 116      Loc [ PsychID   ]
+
+
+     14:  Sample (P70)^19310
+      1: 22       Reps
+      2: 33       Loc [ temp_23   ]
+
+
+     15:  Z=Z+1 (P32)
+      1: 116      Z LOC [ PsychID   ]
+
+;output the third sensor
+
+     16:  Do (P86)
+      1: 10       Set Output Flag High
+
+
+     17:  Real Time (P77)^30303
+      1: 1220     Year,Day,Hour/Minute (midnight = 2400)
+
+
+     18:  Sample (P70)^21480
+      1: 1        Reps
+      2: 9        Loc [ Logger    ]
+
+
+     19:  Sample (P70)^17334
+      1: 1        Reps
+      2: 10       Loc [ A3497set  ]
+
+
+     20:  Sample (P70)^406
+      1: 1        Reps
+      2: 116      Loc [ PsychID   ]
+
+
+
+     21:  Sample (P70)^11253
+      1: 22       Reps
+      2: 55       Loc [ temp_45   ]
+
+
+
+     22:  Z=Z+1 (P32)
+      1: 116      Z LOC [ PsychID   ]
+
+
+;output the fourth sensor
+
+     23:  Do (P86)
+      1: 10       Set Output Flag High
+
+
+     24:  Real Time (P77)^16065
+      1: 1220     Year,Day,Hour/Minute (midnight = 2400)
+
+
+     25:  Sample (P70)^17672
+      1: 1        Reps
+      2: 9        Loc [ Logger    ]
+
+
+     26:  Sample (P70)^29049
+      1: 1        Reps
+      2: 10       Loc [ A3497set  ]
+
+
+     27:  Sample (P70)^831
+      1: 1        Reps
+      2: 116      Loc [ PsychID   ]
+
+
+
+     28:  Sample (P70)^14673
+      1: 22       Reps
+      2: 77       Loc [ temp_67   ]
+
+
+
+     29:  Z=Z+1 (P32)
+      1: 116      Z LOC [ PsychID   ]
+
+;output the fifth sensor
+
+
+     30:  Do (P86)
+      1: 10       Set Output Flag High
+
+
+     31:  Real Time (P77)^706
+      1: 1220     Year,Day,Hour/Minute (midnight = 2400)
+
+
+     32:  Sample (P70)^18058
+      1: 1        Reps
+      2: 9        Loc [ Logger    ]
+
+
+
+     33:  Sample (P70)^16942
+      1: 1        Reps
+      2: 10       Loc [ A3497set  ]
+
+
+
+     34:  Sample (P70)^8412
+      1: 1        Reps
+      2: 116      Loc [ PsychID   ]
+
+
+
+     35:  Sample (P70)^3920
+      1: 22       Reps
+      2: 99       Loc [ temp_89   ]
+
+
+;increment the psychrometer ID
+;this is only initialized once so each psychrometer
+;will have its own number rather than being numbered 1-5
+;within each 3497 measured.
+
+     36:  Z=Z+1 (P32)
+      1: 116      Z LOC [ PsychID   ]
+
+
+
+     37:  Do (P86)
+      1: 20       Set Output Flag Low
+
+;increment the 3497 to be measured next
+
+     38:  Z=Z+1 (P32)
+      1: 10       Z LOC [ A3497set  ]
+
+39:  End (P95)
+
+
+40:  Beginning of Subroutine (P85)
+ 1: 2        Subroutine 2
+
+; output the first sensor
+
+     41:  Do (P86)
+      1: 10       Set Output Flag High
+
+
+     42:  Real Time (P77)^16588
+      1: 1220     Year,Day,Hour/Minute (midnight = 2400)
+
+
+     43:  Sample (P70)^19579
+      1: 1        Reps
+      2: 233      Loc [ Logger2   ]
+
+
+
+     44:  Sample (P70)^3839
+      1: 1        Reps
+      2: 231      Loc [ A3497set2 ]
+
+
+     45:  Sample (P70)^28346
+      1: 1        Reps
+      2: 232      Loc [ PsychID2  ]
+
+
+     46:  Sample (P70)^25200
+      1: 22       Reps
+      2: 121      Loc [ temp2_1   ]
+
+;output the second sensor
+
+     47:  Z=Z+1 (P32)
+      1: 232      Z LOC [ PsychID2  ]
+
+
+     48:  Do (P86)
+      1: 10       Set Output Flag High
+
+
+     49:  Real Time (P77)^14491
+      1: 1220     Year,Day,Hour/Minute (midnight = 2400)
+
+
+
+     50:  Sample (P70)^15774
+      1: 1        Reps
+      2: 233      Loc [ Logger2   ]
+
+
+     51:  Sample (P70)^27056
+      1: 1        Reps
+      2: 231      Loc [ A3497set2 ]
+
+
+     52:  Sample (P70)^14820
+      1: 1        Reps
+      2: 232      Loc [ PsychID2  ]
+
+
+     53:  Sample (P70)^5633
+      1: 22       Reps
+      2: 143      Loc [ temp2_23  ]
+
+
+     54:  Z=Z+1 (P32)
+      1: 232      Z LOC [ PsychID2  ]
+
+;output the third sensor
+
+     55:  Do (P86)
+      1: 10       Set Output Flag High
+
+
+     56:  Real Time (P77)^8600
+      1: 1220     Year,Day,Hour/Minute (midnight = 2400)
+
+
+     57:  Sample (P70)^7261
+      1: 1        Reps
+      2: 233      Loc [ Logger2   ]
+
+
+     58:  Sample (P70)^654
+      1: 1        Reps
+      2: 231      Loc [ A3497set2 ]
+
+
+     59:  Sample (P70)^20665
+      1: 1        Reps
+      2: 232      Loc [ PsychID2  ]
+
+
+
+     60:  Sample (P70)^1698
+      1: 22       Reps
+      2: 165      Loc [ temp2_45  ]
+
+
+
+     61:  Z=Z+1 (P32)
+      1: 232      Z LOC [ PsychID2  ]
+
+
+;output the fourth sensor
+
+     62:  Do (P86)
+      1: 10       Set Output Flag High
+
+
+     63:  Real Time (P77)^20125
+      1: 1220     Year,Day,Hour/Minute (midnight = 2400)
+
+
+     64:  Sample (P70)^1663
+      1: 1        Reps
+      2: 233      Loc [ Logger2   ]
+
+
+     65:  Sample (P70)^10425
+      1: 1        Reps
+      2: 231      Loc [ A3497set2 ]
+
+
+     66:  Sample (P70)^4222
+      1: 1        Reps
+      2: 232      Loc [ PsychID2  ]
+
+
+
+     67:  Sample (P70)^1813
+      1: 22       Reps
+      2: 187      Loc [ temp2_67  ]
+
+
+
+     68:  Z=Z+1 (P32)
+      1: 232      Z LOC [ PsychID2  ]
+
+;output the fifth sensor
+
+
+     69:  Do (P86)
+      1: 10       Set Output Flag High
+
+
+     70:  Real Time (P77)^27166
+      1: 1220     Year,Day,Hour/Minute (midnight = 2400)
+
+
+     71:  Sample (P70)^17437
+      1: 1        Reps
+      2: 233      Loc [ Logger2   ]
+
+
+
+     72:  Sample (P70)^3633
+      1: 1        Reps
+      2: 231      Loc [ A3497set2 ]
+
+
+
+     73:  Sample (P70)^826
+      1: 1        Reps
+      2: 232      Loc [ PsychID2  ]
+
+
+
+     74:  Sample (P70)^26553
+      1: 22       Reps
+      2: 209      Loc [ temp2_89  ]
+
+
+;increment the psychrometer ID
+;this is only initialized once so each psychrometer
+;will have its own number rather than being numbered 1-5
+;within each 3497 measured.
+
+     75:  Z=Z+1 (P32)
+      1: 232      Z LOC [ PsychID2  ]
+
+
+
+     76:  Do (P86)
+      1: 20       Set Output Flag Low
+
+;increment the 3497 to be measured next
+
+     77:  Z=Z+1 (P32)
+      1: 231      Z LOC [ A3497set2 ]
+
+
+78:  End (P95)
+
+End Program
+End Program
+
+
+-Input Locations-
+1 ref1      1 3 1
+2 dT_1      5 1 1
+3 dT_2      9 1 1
+4 dT_3      9 1 1
+5 dT_4      9 1 1
+6 dT_5      9 1 1
+7 dT_6      9 1 1
+8 dT_7      17 1 1
+9 Logger    1 6 1
+10 A3497set  1 6 2
+11 temp_1    5 1 2
+12 temp_2    9 1 2
+13 temp_3    9 1 2
+14 temp_4    9 1 2
+15 temp_5    9 1 2
+16 temp_6    9 1 2
+17 temp_7    9 1 2
+18 temp_8    9 1 2
+19 temp_9    9 1 2
+20 temp_10   9 1 2
+21 temp_11   9 1 2
+22 temp_12   9 1 2
+23 temp_13   9 1 2
+24 temp_14   9 1 2
+25 temp_15   9 1 2
+26 temp_16   9 1 2
+27 temp_17   9 1 2
+28 temp_18   9 1 2
+29 temp_19   9 1 2
+30 temp_20   9 1 2
+31 temp_21   9 1 2
+32 temp_22   9 1 2
+33 temp_23   9 1 2
+34 temp_24   9 1 2
+35 temp_25   9 1 2
+36 temp_26   9 1 2
+37 temp_27   9 1 2
+38 temp_28   9 1 2
+39 temp_29   9 1 2
+40 temp_30   9 1 2
+41 temp_31   9 1 2
+42 temp_32   9 1 2
+43 temp_33   9 1 2
+44 temp_34   9 1 2
+45 temp_35   9 1 2
+46 temp_36   9 1 2
+47 temp_37   9 1 2
+48 temp_38   9 1 2
+49 temp_39   9 1 2
+50 temp_40   9 1 2
+51 temp_41   9 1 2
+52 temp_42   9 1 2
+53 temp_43   9 1 2
+54 temp_44   25 1 2
+55 temp_45   9 1 1
+56 temp_46   9 1 1
+57 temp_47   9 1 1
+58 temp_48   9 1 1
+59 temp_49   9 1 1
+60 temp_50   9 1 1
+61 temp_51   9 1 1
+62 temp_52   9 1 1
+63 temp_53   9 1 1
+64 temp_54   9 1 1
+65 temp_55   9 1 1
+66 temp_56   9 1 1
+67 temp_57   9 1 1
+68 temp_58   9 1 1
+69 temp_59   9 1 1
+70 temp_60   9 1 1
+71 temp_61   9 1 1
+72 temp_62   9 1 1
+73 temp_63   9 1 1
+74 temp_64   9 1 1
+75 temp_65   9 1 1
+76 temp_66   9 1 1
+77 temp_67   9 1 1
+78 temp_68   9 1 1
+79 temp_69   9 1 1
+80 temp_70   9 1 1
+81 temp_71   9 1 1
+82 temp_72   9 1 1
+83 temp_73   9 1 1
+84 temp_74   9 1 1
+85 temp_75   9 1 1
+86 temp_76   9 1 1
+87 temp_77   9 1 1
+88 temp_78   9 1 1
+89 temp_79   9 1 1
+90 temp_80   9 1 1
+91 temp_81   9 1 1
+92 temp_82   9 1 1
+93 temp_83   9 1 1
+94 temp_84   9 1 1
+95 temp_85   9 1 1
+96 temp_86   9 1 1
+97 temp_87   9 1 1
+98 temp_88   9 1 1
+99 temp_89   9 1 1
+100 temp_90   9 1 1
+101 temp_91   9 1 1
+102 temp_92   9 1 1
+103 temp_93   9 1 1
+104 temp_94   9 1 1
+105 temp_95   9 1 1
+106 temp_96   9 1 1
+107 temp_97   9 1 1
+108 temp_98   9 1 1
+109 temp_99   9 1 1
+110 temp_100  9 1 1
+111 temp_101  9 1 1
+112 temp_102  9 1 1
+113 temp_103  9 1 1
+114 temp_104  9 1 1
+115 temp_105  9 1 1
+116 PsychID   9 11 7
+117 BattVolt  9 1 2
+118 card1     9 1 1
+119 card2     9 1 1
+120 card3     17 4 2
+121 temp2_1   5 1 3
+122 temp2_2   9 1 3
+123 temp2_3   9 1 3
+124 temp2_4   9 1 3
+125 temp2_5   9 1 3
+126 temp2_6   9 1 3
+127 temp2_7   9 1 3
+128 temp2_8   9 1 3
+129 temp2_9   9 1 3
+130 temp2_10  9 1 3
+131 temp2_11  9 1 3
+132 temp2_12  9 1 3
+133 temp2_13  9 1 3
+134 temp2_14  9 1 3
+135 temp2_15  9 1 3
+136 temp2_16  9 1 3
+137 temp2_17  9 1 3
+138 temp2_18  9 1 3
+139 temp2_19  9 1 3
+140 temp2_20  9 1 3
+141 temp2_21  9 1 3
+142 temp2_22  9 1 3
+143 temp2_23  9 1 3
+144 temp2_24  9 1 3
+145 temp2_25  9 1 3
+146 temp2_26  9 1 3
+147 temp2_27  9 1 3
+148 temp2_28  9 1 3
+149 temp2_29  9 1 3
+150 temp2_30  9 1 3
+151 temp2_31  9 1 3
+152 temp2_32  9 1 3
+153 temp2_33  9 1 3
+154 temp2_34  9 1 3
+155 temp2_35  9 1 3
+156 temp2_36  9 1 3
+157 temp2_37  9 1 3
+158 temp2_38  9 1 3
+159 temp2_39  9 1 3
+160 temp2_40  9 1 3
+161 temp2_41  9 1 3
+162 temp2_42  9 1 3
+163 temp2_43  9 1 3
+164 temp2_44  9 1 3
+165 temp2_45  9 1 3
+166 temp2_46  9 1 3
+167 temp2_47  9 1 3
+168 temp2_48  9 1 3
+169 temp2_49  9 1 3
+170 temp2_50  9 1 3
+171 temp2_51  9 1 3
+172 temp2_52  9 1 3
+173 temp2_53  9 1 3
+174 temp2_54  9 1 3
+175 temp2_55  9 1 3
+176 temp2_56  9 1 3
+177 temp2_57  9 1 3
+178 temp2_58  9 1 3
+179 temp2_59  9 1 3
+180 temp2_60  9 1 3
+181 temp2_61  9 1 3
+182 temp2_62  9 1 3
+183 temp2_63  9 1 3
+184 temp2_64  9 1 3
+185 temp2_65  9 1 3
+186 temp2_66  9 1 3
+187 temp2_67  9 1 3
+188 temp2_68  9 1 3
+189 temp2_69  9 1 3
+190 temp2_70  9 1 3
+191 temp2_71  9 1 3
+192 temp2_72  9 1 3
+193 temp2_73  9 1 3
+194 temp2_74  9 1 3
+195 temp2_75  9 1 3
+196 temp2_76  9 1 3
+197 temp2_77  9 1 3
+198 temp2_78  9 1 3
+199 temp2_79  9 1 3
+200 temp2_80  9 1 3
+201 temp2_81  9 1 3
+202 temp2_82  9 1 3
+203 temp2_83  9 1 3
+204 temp2_84  9 1 3
+205 temp2_85  9 1 3
+206 temp2_86  9 1 3
+207 temp2_87  9 1 3
+208 temp2_88  25 1 3
+209 temp2_89  9 1 2
+210 temp2_90  9 1 2
+211 temp2_91  9 1 2
+212 temp2_92  9 1 2
+213 temp2_93  9 1 2
+214 temp2_94  9 1 2
+215 temp2_95  9 1 2
+216 temp2_96  9 1 2
+217 temp2_97  9 1 2
+218 temp2_98  9 1 2
+219 temp2_99  9 1 2
+220 temp2_100 9 1 2
+221 temp2_101 9 1 2
+222 temp2_102 9 1 2
+223 temp2_103 9 1 2
+224 temp2_104 9 1 2
+225 temp2_105 9 1 2
+226 temp2_106 9 1 2
+227 temp2_107 9 1 2
+228 temp2_108 9 1 2
+229 temp2_109 9 1 2
+230 temp2_110 17 1 2
+231 A3497set2 1 6 2
+232 PsychID2  1 10 6
+233 Logger2   1 5 1
+-Program Security-
+0
+0000
+0000
+-DLD File Labels-
+0
+-Final Storage Labels-
+0,Year_RTM,27171
+0,Day_RTM
+0,Hour_Minute_RTM
+1,Logger~9,19973
+2,ref1~1,6805
+3,dT_1~2,22733
+3,dT_2~3
+3,dT_3~4
+3,dT_4~5
+3,dT_5~6
+3,dT_6~7
+3,dT_7~8
+4,Year_RTM,16427
+4,Day_RTM
+4,Hour_Minute_RTM
+5,Logger~9,25314
+6,A3497set~10,26806
+7,PsychID~116,20951
+8,temp_1~11,22689
+8,temp_2~12
+8,temp_3~13
+8,temp_4~14
+8,temp_5~15
+8,temp_6~16
+8,temp_7~17
+8,temp_8~18
+8,temp_9~19
+8,temp_10~20
+8,temp_11~21
+8,temp_12~22
+8,temp_13~23
+8,temp_14~24
+8,temp_15~25
+8,temp_16~26
+8,temp_17~27
+8,temp_18~28
+8,temp_19~29
+8,temp_20~30
+8,temp_21~31
+8,temp_22~32
+9,Year_RTM,27314
+9,Day_RTM
+9,Hour_Minute_RTM
+10,Logger~9,8248
+11,A3497set~10,6212
+12,PsychID~116,21191
+13,temp_23~33,19310
+13,temp_24~34
+13,temp_25~35
+13,temp_26~36
+13,temp_27~37
+13,temp_28~38
+13,temp_29~39
+13,temp_30~40
+13,temp_31~41
+13,temp_32~42
+13,temp_33~43
+13,temp_34~44
+13,temp_35~45
+13,temp_36~46
+13,temp_37~47
+13,temp_38~48
+13,temp_39~49
+13,temp_40~50
+13,temp_41~51
+13,temp_42~52
+13,temp_43~53
+13,temp_44~54
+14,Year_RTM,30303
+14,Day_RTM
+14,Hour_Minute_RTM
+15,Logger~9,21480
+16,A3497set~10,17334
+17,PsychID~116,406
+18,temp_45~55,11253
+18,temp_46~56
+18,temp_47~57
+18,temp_48~58
+18,temp_49~59
+18,temp_50~60
+18,temp_51~61
+18,temp_52~62
+18,temp_53~63
+18,temp_54~64
+18,temp_55~65
+18,temp_56~66
+18,temp_57~67
+18,temp_58~68
+18,temp_59~69
+18,temp_60~70
+18,temp_61~71
+18,temp_62~72
+18,temp_63~73
+18,temp_64~74
+18,temp_65~75
+18,temp_66~76
+19,Year_RTM,16065
+19,Day_RTM
+19,Hour_Minute_RTM
+20,Logger~9,17672
+21,A3497set~10,29049
+22,PsychID~116,831
+23,temp_67~77,14673
+23,temp_68~78
+23,temp_69~79
+23,temp_70~80
+23,temp_71~81
+23,temp_72~82
+23,temp_73~83
+23,temp_74~84
+23,temp_75~85
+23,temp_76~86
+23,temp_77~87
+23,temp_78~88
+23,temp_79~89
+23,temp_80~90
+23,temp_81~91
+23,temp_82~92
+23,temp_83~93
+23,temp_84~94
+23,temp_85~95
+23,temp_86~96
+23,temp_87~97
+23,temp_88~98
+24,Year_RTM,706
+24,Day_RTM
+24,Hour_Minute_RTM
+25,Logger~9,18058
+26,A3497set~10,16942
+27,PsychID~116,8412
+28,temp_89~99,3920
+28,temp_90~100
+28,temp_91~101
+28,temp_92~102
+28,temp_93~103
+28,temp_94~104
+28,temp_95~105
+28,temp_96~106
+28,temp_97~107
+28,temp_98~108
+28,temp_99~109
+28,temp_100~110
+28,temp_101~111
+28,temp_102~112
+28,temp_103~113
+28,temp_104~114
+28,temp_105~115
+28,PsychID~116
+28,BattVolt~117
+28,card1~118
+28,card2~119
+28,card3~120
+29,Year_RTM,16588
+29,Day_RTM
+29,Hour_Minute_RTM
+30,Logger2~233,19579
+31,A3497set2~231,3839
+32,PsychID2~232,28346
+33,temp2_1~121,25200
+33,temp2_2~122
+33,temp2_3~123
+33,temp2_4~124
+33,temp2_5~125
+33,temp2_6~126
+33,temp2_7~127
+33,temp2_8~128
+33,temp2_9~129
+33,temp2_10~130
+33,temp2_11~131
+33,temp2_12~132
+33,temp2_13~133
+33,temp2_14~134
+33,temp2_15~135
+33,temp2_16~136
+33,temp2_17~137
+33,temp2_18~138
+33,temp2_19~139
+33,temp2_20~140
+33,temp2_21~141
+33,temp2_22~142
+34,Year_RTM,14491
+34,Day_RTM
+34,Hour_Minute_RTM
+35,Logger2~233,15774
+36,A3497set2~231,27056
+37,PsychID2~232,14820
+38,temp2_23~143,5633
+38,temp2_24~144
+38,temp2_25~145
+38,temp2_26~146
+38,temp2_27~147
+38,temp2_28~148
+38,temp2_29~149
+38,temp2_30~150
+38,temp2_31~151
+38,temp2_32~152
+38,temp2_33~153
+38,temp2_34~154
+38,temp2_35~155
+38,temp2_36~156
+38,temp2_37~157
+38,temp2_38~158
+38,temp2_39~159
+38,temp2_40~160
+38,temp2_41~161
+38,temp2_42~162
+38,temp2_43~163
+38,temp2_44~164
+39,Year_RTM,8600
+39,Day_RTM
+39,Hour_Minute_RTM
+40,Logger2~233,7261
+41,A3497set2~231,654
+42,PsychID2~232,20665
+43,temp2_45~165,1698
+43,temp2_46~166
+43,temp2_47~167
+43,temp2_48~168
+43,temp2_49~169
+43,temp2_50~170
+43,temp2_51~171
+43,temp2_52~172
+43,temp2_53~173
+43,temp2_54~174
+43,temp2_55~175
+43,temp2_56~176
+43,temp2_57~177
+43,temp2_58~178
+43,temp2_59~179
+43,temp2_60~180
+43,temp2_61~181
+43,temp2_62~182
+43,temp2_63~183
+43,temp2_64~184
+43,temp2_65~185
+43,temp2_66~186
+44,Year_RTM,20125
+44,Day_RTM
+44,Hour_Minute_RTM
+45,Logger2~233,1663
+46,A3497set2~231,10425
+47,PsychID2~232,4222
+48,temp2_67~187,1813
+48,temp2_68~188
+48,temp2_69~189
+48,temp2_70~190
+48,temp2_71~191
+48,temp2_72~192
+48,temp2_73~193
+48,temp2_74~194
+48,temp2_75~195
+48,temp2_76~196
+48,temp2_77~197
+48,temp2_78~198
+48,temp2_79~199
+48,temp2_80~200
+48,temp2_81~201
+48,temp2_82~202
+48,temp2_83~203
+48,temp2_84~204
+48,temp2_85~205
+48,temp2_86~206
+48,temp2_87~207
+48,temp2_88~208
+49,Year_RTM,27166
+49,Day_RTM
+49,Hour_Minute_RTM
+50,Logger2~233,17437
+51,A3497set2~231,3633
+52,PsychID2~232,826
+53,temp2_89~209,26553
+53,temp2_90~210
+53,temp2_91~211
+53,temp2_92~212
+53,temp2_93~213
+53,temp2_94~214
+53,temp2_95~215
+53,temp2_96~216
+53,temp2_97~217
+53,temp2_98~218
+53,temp2_99~219
+53,temp2_100~220
+53,temp2_101~221
+53,temp2_102~222
+53,temp2_103~223
+53,temp2_104~224
+53,temp2_105~225
+53,temp2_106~226
+53,temp2_107~227
+53,temp2_108~228
+53,temp2_109~229
+53,temp2_110~230
