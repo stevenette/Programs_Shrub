@@ -398,10 +398,10 @@ Alias RTD_temp(1)=RTD_50cm
 Alias RTD_temp(2)=RTD_250cm
 Units RTD_temp= C
 
-Dim e_hmp				'HMP45C vapor pressure.
+Dim e_hmp_mean				'HMP45C vapor pressure.
 Dim h2o_hmp_mean			'Mean HMP45C vapor density.
 Dim rho_a_mean				'Mean air density.
-Units e_hmp = kPa
+Units e_hmp_mean = kPa
 Units h2o_hmp_mean = g/m^3
 Units rho_a_mean = kg/m^3
 
@@ -707,11 +707,11 @@ Dim wind_east					'East wind in compass coordinate system.
 Dim wind_north					'North wind in compass coordinate system.
 Dim save_ts_flag_on As Boolean	'Used to synchronize the time series output to the even minute.
 Dim dly_data_out(10)			'Variable used to temporarily store the lagged record.
-Dim dly_data2_out(15)			'Variable used to temporarily store the lagged record.
-Dim rho_d_mean					'Density of dry air used in Webb et al. term [kg / m^3].
+Dim dly_data2_out(15)			'Varia of dry air used in Webb et al. term [kg / m^3].
 Dim diag_csat_work As Long		'Working variable used to break out the CSAT3 diagnostic bits.
 Dim diag_irga_work As Long		'Working variable used to break out the LI-7500 diagnostic bits.
 Dim diag_irga2_work As Long		'Working variable used to break out the LI-7500 diagnostic bits.
+Dim rho_d_mean				'Density of dry air.
 Dim e_sat						'Saturation vapor pressure.
 'Dim j_mux As Long
 'Dim slowsequence_finished_f As Boolean                   'Flag used to indicate the SlowSequence has finished its scan.
@@ -913,7 +913,7 @@ DataTable (comp_cov,TRUE,1)
   WindVector (1,wind_east,wind_north,IEEE4,disable_flag_on(1),0,1,2)
   WindVector (1,Uy,Ux,IEEE4,disable_flag_on(1),0,1,2)
   Average (1,AirTC,IEEE4,FALSE)
-  Average (1,e_hmp,IEEE4,FALSE)
+  Average (1,e_hmp_mean,IEEE4,FALSE)
   Average (1,co2,IEEE4,disable_flag_on(2))
   Average (1,h2o,IEEE4,disable_flag_on(2))
   Average (1,press,IEEE4,disable_flag_on(2))
@@ -933,7 +933,7 @@ DataTable (comp_cov2,TRUE,1)
   WindVector (1,wind_east,wind_north,IEEE4,disable_flag_on(1),0,1,2)
   WindVector (1,Uy,Ux,IEEE4,disable_flag_on(1),0,1,2)
   Average (1,AirTC,IEEE4,FALSE)
-  Average (1,e_hmp,IEEE4,FALSE)
+  Average (1,e_hmp_mean,IEEE4,FALSE)
   Average (1,co22,IEEE4,disable_flag_on(2))
   Average (1,h2o2,IEEE4,disable_flag_on(2))
   Average (1,press2,IEEE4,disable_flag_on(2))
